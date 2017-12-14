@@ -1,0 +1,75 @@
+body{
+  /*实现背景图片全屏设置*/
+ background-repeat: no-repeat;
+ width:100%;
+ height:auto;
+ /*以下这两句实现背景的全覆盖，且当窗口大小改变时，仍然是全覆盖*/
+ background-size:cover;
+ background-attachment:fixed;
+}
+.container{
+  margin:30px auto;
+}
+.contentset{
+    width:80%;
+    margin:10px auto;
+    text-align:center;
+    /*background:#00ff00;*/
+  }
+  .city{
+    float:left;
+  }
+ .city h5{
+    float:inherit;
+    color:#ffffff;
+  }
+  
+  .frm .todayfrm{
+    width:300px;
+    
+    background:rgba(0, 0, 255, 0.1);
+    position:absolute;
+    top:100px;
+    right:2%;
+    text-align:center;
+    border-radius:10px;
+    display:none;
+    z-index:-1;
+    /*方便鼠标移开触发事件，之前设置为.currentweather的上一层或同层，
+    总是出现框下拉时，鼠标被迫离开.currentweather*/
+    
+  }
+  .frm .todayfrm p{
+    z-index:inherit;
+    color:#ffffff;
+  }
+  .currentweather div:hover{
+    cursor: pointer;
+  }
+  .frm .currentweather div{
+    width:200px;
+    height:35px;
+    font-size:22px;
+    color: #ffffff;
+    float:right;
+    background-color:rgba(10, 7, 7, 0.2); 
+    border-radius:10px;
+    text-align:center;
+  }
+  .contentset .futureweather{
+    position:absolute;
+    margin:0 auto;
+    width:85%;
+    bottom:5%;
+    right:5%;
+  }
+  .contentset .futureweather div{
+    float:left;
+    width:17%;
+    margin:0 5px;
+  }
+  .contentset .futureweather .futurebg{
+    background-color:rgba(4, 77, 80, 0.2); 
+    color:#ffffff;
+    border-radius:5px;
+  }

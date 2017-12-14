@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="libs/jQuerylib/jquery-3.2.1.min.js"></script>
+    <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container frm">
+        <div class="city">
+           <h5>当前城市：</h5>
+           <select id="cityselect">
+             <option>北京</option>
+             <option>上海</option>
+             <option selected>南京</option>
+             <option>深圳</option>
+           </select>
+           <button id="submitcity">确认</button>
+      </div>   
+      <div class="currentweather" >
+          <div id="currentweatherid">
+            <!-- 用于显示及时获取的天气信息-->
+          </div>
+      </div>
+      <div class="todayfrm">
+          <!-- 用于显示当天天气信息-->
+     </div>
+        <div class="container contentset">
+          <div class="container futureweather">
+           <!-- 用于显示未来5天天气信息-->
+          </div>
+      </div>  
+  </div>
+</body>
+</html>
