@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+}
+.contenttotal{
+    width:700px;
+    background:#828382;
+    margin:10px auto;
+    text-align:center;
+    height:100px;
+}
+.contenttotal .navcontent{
+
+    height:80px;
+    margin:0px;
+    overflow:hidden;
+}
+.contenttotal .navcontent .navcontentleft{
+    float:left;
+    width:85%;
+    height:80px;
+    padding-top:8px;
+    font-size:48px;
+    text-align:center;
+    color:#ffffff;
+}
+.contenttotal .navcontent .navcontentright{
+    width:20px;
+    float:right;
+    margin-top:5px;
+}
+
+.contenttotal .navcontent .navcontentright div{
+    margin-top:5px;
+    background:#e1dfe4;
+    width:inherit;
+    height:20px;
+    float:right;
+    cursor:pointer;
+}
+.contenttotal .navcontent .navcontentright div i{
+    margin:3px 0 0 3px;
+    float:left;
+}
+.contenttotal .navcontent .navcontentright div span{
+    float:right;
+}
+.contenttotal hr{
+    color:#ffffff;
+    background-color:#ffffff;
+    height:1px;
+    margin-top:8px;
+}
+.contentlistall{
+    width:700px;
+    margin:5px auto;
+}
+.contentlistall .contentlistli,.contentlistall .contentlistul{
+    margin:5px auto;
+}
+.contentlistall .contentlistul{
+    background:#049784;
+}
+.contentlistall .contentlistli{
+    background:#85b9bd
+}
+.contentlistall span{
+    float:left;
+    color:#ffffff;
+}
+.contentlistall img{
+    margin:10px 0;
+    width:60px;
+    height:60px;
+    border-radius:30px;
+}
+.contentlistall .listset{
+    float:right;
+    margin:auto 10px;
+    text-align:center;
+    height:80px;
+    color:#ffffff;
+    font-size:16px;
+}
+.contentlistall .namep{
+    width:330px;
+    line-height:80px;
+}
+.contentlistall .slugp{
+    width:250px;
+    line-height:80px;
+}
