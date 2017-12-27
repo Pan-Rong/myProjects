@@ -73,3 +73,34 @@ body{
     color:#ffffff;
     border-radius:5px;
   }
+  @media screen and (max-width:500px) {
+    .city{
+      font-size:8px;
+    }
+      .frm .todayfrm{
+        width:200px;
+        background:rgba(0, 0, 255, 0.1);
+        top:100px;
+      }
+      .frm .todayfrm p{
+        font-size:10px;
+      }
+      .frm .currentweather div{
+        width:150px;
+        height:35px;
+        font-size:16px;
+        color: #ffffff;
+      }
+      .contentset .futureweather{
+        width:100%;
+        left:20px;
+        bottom:5%;
+        right:5%;
+      }
+      .contentset .futureweather div{
+        width:17%;
+        margin:0 2px;
+        font-size:10px;
+      }
+
+  }

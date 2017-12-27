@@ -34,7 +34,7 @@ function messageHandle(){
   }
  }
 function scrollvertical(){
-  var messageObj=$("<p></p>"); 
+  var messageObj=$("<p></p>"); //创建p节点
   messageObj.text(narr[numarrvertival]);
     $(".content1 .row").append(messageObj);
   moveObj(messageObj);
