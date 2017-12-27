@@ -59,6 +59,18 @@ left:10px;
 margin:10px auto;
 text-align:left;
 }
-.searchoutput .searchoutputInner p{
-color:#ffffff;
-} 
+
+@media screen and (max-width:500px){
+  .contextfrm1 div a{
+    font-size:16px;
+  }
+  .searchbp{
+   font-size:14px;
+  }
+  .searchoutput .searchoutputInner p{
+    font-size:10px;
+    } 
+    .searchoutput .searchoutputInner{
+      width:100%;
+    }
+}
