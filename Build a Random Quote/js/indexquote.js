@@ -21,7 +21,7 @@ $(document).ready(function() {
       var getRanQuote=getRandomQuote();//得到随机颜色
         currentQuoteContent=getRanQuote.quoteContent;
         currentQuoteAuthor=getRanQuote.quoteAuthor;
-      $("blockquote").html('<b>"</b>'+getRanQuote.quoteContent);
+      $("blockquote").html('<b>"</b>'+getRanQuote.quoteContent+'<small class="quotesetcolor"></small>');
       $("small").html(getRanQuote.quoteAuthor);
       $(".quotesetcolor").css("color",getRanColor);
       $(".bgroundset").css("background",getRanColor);

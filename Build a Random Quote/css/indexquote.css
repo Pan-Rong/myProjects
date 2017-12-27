@@ -1,0 +1,63 @@
+.container-fliud{
+    padding:8% 0 35%;
+    margin:auto;
+    background:#315dad;
+}
+.container{
+    padding:30px;
+}
+.frm{
+    text-align:center;
+}
+.frm a{
+    text-decoration:none; 
+}
+.frm p{
+    margin:10px;
+    color:#ffffff;
+}
+.frm .textcontent{
+    background:#ffffff;
+    width:80%;
+}
+.frm .textcontent .textshow{
+    margin-bottom:20px;
+}
+.frm .textcontent .textshow blockquote{
+    text-align:left;
+    font-size:20px;
+}
+.frm .textcontent .textshow small{
+    text-align:right;
+    opacity:0.5;
+}
+.row{
+    padding:0 20px;
+}
+.row .iconclass{
+    border:0px;
+    border-radius:2px;
+    width:30px;
+    height:30px;
+    padding-top:9px;
+    margin:0px 2px; 
+    float:left;
+}
+.row .btn{
+    float:right;
+    border:0px;
+}
+.iconclass i{
+    color:#ffffff;
+}
+a:hover{
+    cursor:pointer;
+}
+@media screen and (max-width:500px){
+    .frm .textcontent .textshow blockquote{
+        font-size:14px;
+    }
+    .frm .textcontent .textshow blockquote small{
+        opacity:0.5;
+    }
+}
