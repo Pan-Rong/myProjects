@@ -58,7 +58,7 @@ function getWeather(){
             cityPicture(temCity,json.result.sk.time);   
          //实现未来五天的天气简显
             jq(".futureweather").html("");//清空，以便显示新数据
-                for(var i=0;i<5;i++){
+                for(var i=1;i<6;i++){//之前i=0时，显示的是第二天的天气，但这次不是为啥显示的是当天的天气，特改成i=1；
                     (function(i){
                     var futureW=`<div class="futurebg"><p>${json.result.future[i].week}</p>
                     <p>${json.result.future[i].date}&nbsp;&nbsp;
