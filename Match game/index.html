@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/indexcard.css">
+<title>纸牌游戏</title>
+</head>
+<body>
+<div id="gamenotes">
+	<fieldset>
+		<legend>Game Notes:</legend>
+		<ol class="content">
+			<li>点击刷新按钮开始游戏,未点击之前,点击图片会提示需要点击刷新按钮;</li>
+			<li>开始游戏后出现暂停/继续按钮,可实现暂停或继续游戏</li>
+			<li>点击暂停后,点击图片提示处于暂停状态</li>
+			<li>每匹配2对图片,得一颗星,对总步数没有限制</li>
+			<li>开始游戏后,点击同一张图片两次,会提示信息</li>
+			<li>开始游戏后,点击两张图片不匹配时,会提示信息</li>
+			<li>开始游戏后,找到两张相同图片,会提示信息</li>
+			<li>游戏时间为60s,超过60s,提示游戏结束,需重新开始</li>
+			<li>在60s内完成游戏,则输出总步数及星星等级</li>
+			<li>超时后,点击图片，提示已超时信息</li>
+		</ol>
+	</fieldset>
+</div>
+<form action="#" id="frm" >
+	<div id="numbdiv">
+		<h1>Matching Game</h1>
+		<div class="numb">
+		<!---计算等级-->
+			<div class="imgstars">
+				<img class="score" src="images/cards/starw.jpg">
+				<img class="score" src="images/cards/starw.jpg">
+				<img class="score" src="images/cards/starw.jpg">
+				<img class="score" src="images/cards/starw.jpg">
+			</div>
+			<div id="stepnum" class="stepnumc"></div><div>Moves</div>
+			<!---用于计算时间用时-->
+			<div id="starttime">timing</div>
+			<!---<input type="button" value="start" onclick="starthandle(this)">-->
+			<input type="reset" value="" onclick="resethandle(this)">
+			<input type="button" value="" onclick="pausehandle(this)" id="playbutton">
+		</div>
+	</div>
+	<div id="bgdiv">
+		<ul>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid0"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid1"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid2"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid3"></div></li>
+		</ul>
+		<ul>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid4"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid5"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid6"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid7"></div></li>
+		</ul>
+		<ul>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid8"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid9"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid10"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid11"></div></li>
+		</ul>
+		<ul>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid12"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid13"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid14"></div></li>
+			<li onclick="onclickhandle(this)"><div class="ldivimg" id="imgid15"></div></li>
+		</ul>
+	</div>	
+</form>
+<script type="text/javascript" src="js/indexcard.js"></script>
+</body>
+</html>

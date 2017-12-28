@@ -1,0 +1,123 @@
+﻿/* CSS Document */
+*{
+		margin:0;
+		padding:0;
+	}
+	#frm{
+		border:green 2px solid;
+		padding:20px;
+		height:550px;
+		width:500px;
+		text-align:center;
+		margin:5px auto;
+		position:relative;
+		/*position:absolute;*/
+	}
+	#gamenotes fieldset{
+		padding:30px;/**/
+		height:200px;
+		width:480px;
+		text-align:left;
+		font-size:14px;
+		margin:5px auto;/**/
+	}
+	#frm #bgdiv{
+		padding:10px;/**/
+		width:450px;
+		height:450px;
+		margin:auto;
+		/*边框圆角设置*/
+		-moz-border-radius:5px;
+		-ms-border-radius:5px;
+		-khtml-border-radius:5px;
+		-webkit-border-radius:5px;
+		-o-border-radius:5px;
+		border-radius:5px;
+		
+		/*背景渐变设置*/
+		background-image:-moz-linear-gradient(top,#22d8ba,#888cc6);
+		background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#22d8ba),color-stop(1,#888cc6) );/*此处可以用color-stop来实现位置的颜色，也可以用from(颜色)，to(颜色)*/
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#22d8ba",endColorstr="#888cc6",GradientType="0");
+		/*阴影设置,采用CSS3中的box-shadow来设置，box-shadow:h-shadow v-shadow blur spread color inset;其中，前两项是必填的，为水平和垂直阴影的位置，可为负值；
+		blur为模糊距离；spread为阴影的尺寸；inset：将外部阴影(outset)改为内部阴影*/
+		box-shadow:10px 10px 5px #888888;	
+		-moz-box-shadow:10px 10px 5px #888888;
+	}
+	#frm #bgdiv ul li{
+		list-style:none;/*清除li默认样式*/
+		cursor:pointer;
+		width:90px;
+		height:90px;
+		border:1px black solid;
+		float:left;
+		margin:10px;
+		
+		-moz-border-radius:5px;
+		-ms-border-radius:5px;
+		-khtml-border-radius:5px;
+		-webkit-border-radius:5px;
+		-o-border-radius:5px;
+		border-radius:5px;
+		background:#cccccc;
+	}
+	#frm #bgdiv ul li img{
+		-moz-border-radius:5px;
+		-ms-border-radius:5px;
+		-khtml-border-radius:5px;
+		-webkit-border-radius:5px;
+		-o-border-radius:5px;
+		border-radius:5px;
+	}
+	#frm #bgdiv ul{
+		position:relative;/**/
+		clear:left;/*设置从上一个左浮动标签的下面开始浮动*/
+	}
+	#frm #bgdiv ul li div{
+		width:90px;
+		height:90px;
+		display:none;/**/
+	}
+	#frm #bgdiv ul li:hover{
+		transition:all ease-in-out;
+		
+		/*实现图片变大效果*/
+		transform:scaleX(1.2);
+		-webkit-transform:scaleX(1.2);
+		-khtml-transform:scaleX(1.2);
+		-moz-transform:scaleX(1.2);
+		-o-transform:scaleX(1.2);
+		-ms-transform:scaleX(1.2);			
+	}/**/
+	#frm #numbdiv{
+		width:350px;
+		height:70px;
+		margin:auto;
+	}
+	#frm #numbdiv .numb #playbutton{
+		background:url(../images/cards/start.jpg);/**/
+		width:20px;
+		height:20px;
+		float:right;
+		display:none;/**/
+	}
+	#frm #numbdiv .numb #pausebutton{
+		background:url(../images/cards/pause.jpg);/*用于切换*/
+		width:20px;
+		height:20px;
+		float:right;
+	}
+	#frm #numbdiv .numb input[type="reset"]{
+		background:url(../images/cards/reset1.jpg);
+		width:20px;
+		height:20px;
+		margin:auto 10px;
+		float:right;/**/
+	}
+	#frm #numbdiv .numb #starttime,#frm #numbdiv .numb #stepnum{
+		width:25px;
+		height:20px;
+		margin:auto 3px;
+	}
+	#frm #numbdiv .numb div{
+		float:left;
+	}
