@@ -1,0 +1,31 @@
+h4{
+  width:800px;
+  text-align:center;
+}
+#image-container{
+    display:flex;
+}
+.image-container-display{
+    border:2px solid #aaaaaa;
+    margin:5px; 
+}
+.text-display{
+    position:relative;
+}
+.text-display div{
+    margin:20px auto;
+}
+#savefile{
+    margin-left:15%;
+}
+#toptext-color,#bottomtext-color{
+    float:right;
+}
+#description{
+    margin:auto 15px;
+    text-align:left;
+    width:320px;
+}
+#description-display-text{
+    background:#eeeeee;
+}
