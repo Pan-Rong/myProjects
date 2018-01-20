@@ -39,7 +39,7 @@ function rankInitalsecond(){
     jq(".ranksecond").animate({"width":"20px"},200);
     jq(".ranksecond span").html("");
 }
-var getGlobalJson=NaN;//用于存放得到的排行对象信息
+var getGlobalJson=null;//用于存放得到的排行对象信息
 function getGameList(){
     jq.ajax({
         headers:{

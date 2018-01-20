@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script src="libs/jQuerylib/jquery-3.2.1.min.js"></script>
+    <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <title>smartisan</title>
+</head>
+<body>
+    <header>
+        <nav role="navigation">
+            <div class="container-fluid mainnav">
+                <div class="mainnav-left">
+                    <a class="navbar-brand" href="#"><img src="" data-src="images/logo.png"></a>
+                    <a href="#">在线商城</a>
+                    <a href="#">坚果 Pro2</a>
+                    <a href="#">坚果 Pro</a>
+                    <a href="#">Smartisan OS</a>
+                    <a href="#">喜欢云</a>
+                    <a href="#">应用下载</a>
+                    <a href="#">官方论坛</a>
+                </div>
+                <div class="navright" >  
+                    <a class="hovershowcartfrm"><img src="" data-src="images/cart.png"><span class="cartitemnum">0</span></a>
+                    <a class="userloginlogo" title=" 点击登陆"><img src="" data-src="images/user.png"><span class="useroder">0</span></a>
+                </div>
+            </div>
+        </nav>    
+    </header>
+<div class="maincontent" >
+        <nav id="smallnavbar" class="smallnavbarset">
+            <div class="setsmallnavoverflowhidden">
+                <div class="smallnavbarclass">
+                    <a href="#">首页</a>
+                    <a href="" id="smallnavbar-li-show">手机</a>
+                    <a href="#">"足迹"手感膜</a>
+                    <a href="#">官方配件</a>
+                    <a href="" class="smallnavbar-li-show">空气净化类</a>
+                    <a href="" class="smallnavbar-li-show">品牌周边</a>
+                    <a href="#">第三方商品</a>
+                    <a href="#">全部</a>
+                    <a href="#">服务</a>
+                    <a href="#">企业团购</a>
+                </div>
+                <div class="navright" id="smallnavbarright">
+                    <a class="hovershowcartfrm"><img src="" data-src="images/cart.png"><span class="cartitemnum">0</span></a>
+                    <a class="userloginlogo" title="点击登陆"><img src=""data-src="images/user.png"><span class="useroder">0</span></a>
+                </div>
+            </div>
+                <!--用于显示“手机”触发事件-->
+            <div class="smallnavbar-li-show-iphone">
+                <div class="smallnavbar-li-show-iphone-first">
+                    <img src="" data-src="images/iphone/image1.png">
+                    <p>坚果 Pro</p>
+                    <p class="smallnavbar-item-price">￥<strong> 1299.00</strong></p>
+                </div>
+                <div class="smallnavbar-li-show-iphone-second">  
+                    <img src="" data-src="images/iphone/image2.png">
+                    <p>空气净化器</p>
+                    <p class="smallnavbar-item-price">￥<strong> 3499.00</strong></p>
+                </div>   
+            </div>
+            <!--添加商品时的信息-->
+            <div id="additemstocartshowfrm">
+                <div class="additemstocartshowtohidden">
+                    <div class="cartshowfrmheader">
+                        <p><strong>最新添加商品信息:</strong></p>
+                        <button id="cartdeletebtn">Delete</button>
+                    </div>
+                    <div class="cartshowfrmbody">
+                        <p id="iteminfo">空</p>
+                        <p id="itemunitprice">单价:<br>￥ 0.00</p>
+                        <p class="itemnum">数量:<br>1</p>
+                    </div>
+                    <div class="cartshowfrmfooter">
+                        <p id="itemtotalnum">总数量: <strong></strong></p>
+                        <p id="itemtotalprices">总价:￥ <strong></strong></p>
+                    </div>
+                </div>
+            </div>
+            <!--登陆界面-->
+            <div id="user-logincreate-frm">
+                <div class="user-horizontal" role="form">
+                    <div class="userloginfrm">
+                        <div class="useraccount">
+                            <label for="useraccount">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户:</label>
+                            <input type="text" id="useraccount" placeholder="请输入账户">
+                        </div>
+                        <div class="userpassword">
+                            <label for="userpassword">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                            <input type="password" id="userpassword" placeholder="请输入密码">
+                        </div> 
+                        <div class="loginbtn">
+                            <button type="submit" class="btn btn-default" id="user-login">登陆</button>
+                            <p>还没有账户？<a id="createnewaccount">创建新账户</a></p>
+                            <button type="close" class="btn btn-default">关闭</button>
+                        </div>
+                    </div>
+                    <div class="usercreateaccountfrm">
+                        <div class="useraccount">
+                            <label for="newuseraccount">注册账户:</label>
+                            <input type="text" id="newuseraccount" placeholder="请输入账户">
+                        </div>
+                        <div class="userpassword">
+                            <label for="newuserpassword">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                            <input type="password" id="newuserpassword" placeholder="请输入密码">
+                        </div>
+                        <div class="userpasswordcheck">
+                            <label for="userpasswordcheck">确认密码:</label>
+                            <input type="password" id="userpasswordcheck" placeholder="再次输入密码">
+                        </div>
+                        <div class="loginbtn">
+                            <button type="submit" class="btn btn-default" id="createbtn">注册</button>
+                            <button type="close" class="btn btn-default">关闭</button>
+                        </div>
+                    </div>
+                    <div class="userlogoutFrm">
+                        <button class="btn btn-default" id="userlogout">请点击图标登陆</button>
+                    </div>   
+                </div>
+            </div>
+        </nav>
+        <div class="mainpage1">
+                <!--轮播图-->
+            <div id="mainpage1-scrollset">
+            </div>
+            <div class="mainpage1-icobox">
+                <div class="" data-imageiconnum="0" id="scrollimagenum0"></div>
+                <div class="" data-imageiconnum="1" id="scrollimagenum1"></div>
+                <div class="" data-imageiconnum="2" id="scrollimagenum2"></div>
+                <div class="" data-imageiconnum="3" id="scrollimagenum3"></div>
+                <div class="active" data-imageiconnum="4" id="scrollimagenum4"></div>
+            </div>
+        </div>   
+    <div class="list">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <ul class="sublist">
+                    <li class=""><a><img src="" data-src="images/secondlistimages/image1.jpg"></a></li>
+                    <li class=""><a><img src="" data-src="images/secondlistimages/image2.jpg"></a></li>
+                    <li class=""><a><img src="" data-src="images/secondlistimages/image3.jpg"></a></li>
+                    <li class=""><a><img src="" data-src="images/secondlistimages/image4.png"></a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        热门商品
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>
+                            <img src=""data-src="images/newimages/image1.png">
+                            <div class="hotgoods">
+                                <p class="itemtitle"><strong>Smartisan 卫衣 开衫 热血</strong></p>
+                                <p>风格简洁、舒适服帖</p>
+                                <div class="selecticonbox" style="margin-left:37%;">
+                                    <ul >
+                                        <li class="selected" style="background:black" value="black"></li>
+                                        <li class="" style="background:gray" value="gray"></li>
+                                        <li class=""  style="background:#050368" value="blue"></li>
+                                    </ul>
+                                </div>
+                                <div class="hotgoodslist-price"> 
+                                    <p class="itemprice">￥<strong>299.00</strong></p>
+                                </div>
+                                <button>了解详情</button>
+                            </div>
+                            <div class="addshoppingcart"></div>
+                            <p class="textofaddshoppingcart">添加商品</p>   
+                        </li>
+                        <li>
+                            <img src=""data-src="images/newimages/image2.png">
+                            <div class="hotgoods">
+                                <p class="itemtitle"><strong>Smartisan 蓝牙运动耳机</strong></p>
+                                <p>IPX5 级防水设计、佩戴舒适</p>
+                                <div class="selecticonbox" style="margin-left:46%;">
+                                    <ul>
+                                        <li class="selected" style="background:rgb(243, 56, 56)" value="Red"></li>
+                                    </ul>
+                                </div>
+                                <div class="hotgoodslist-price"> 
+                                    <p>￥<strong>299.00</strong></p>
+                                </div>
+                                <button>了解详情</button>
+                            </div>
+                            <div class="addshoppingcart"></div>
+                            <p class="textofaddshoppingcart">添加商品</p>   
+                        </li>
+                        <li>
+                            <img src="" data-src="images/newimages/image3.png">
+                            <div class="hotgoods">
+                                <p class="itemtitle"><strong>Smartisan S-1001 圈铁线控耳机</strong></p>
+                                <p>极简造型、复合振膜、专业级调音</p>
+                                <div class="selecticonbox">
+                                    <ul >
+                                        <li class="selected" style="background:black" value="black"></li>
+                                        <li class="" style="background:rgb(95, 8, 8)" value="wine-red"></li>
+                                        <li class="" style="background:rgb(48, 46, 46)" value="darkgray"></li>
+                                        <li class="" style="background:gray" value="gray"></li>
+                                        <li class=""  style="background:#815302" value="br-yellow"></li>
+                                    </ul>
+                                </div>
+                                <div class="hotgoodslist-price"> 
+                                    <span class="itemprice">￥<strong>199.00 </strong></span><span class="hotgoodslist-deleteprice"> ￥ 299.00</span>
+                                </div>
+                                <button>了解详情</button>
+                            </div>
+                            <div class="addshoppingcart"></div>
+                            <p class="textofaddshoppingcart">添加商品</p>   
+                        </li>
+                        <li>
+                            <img src="" data-src="images/newimages/image4.png">
+                            <div class="hotgoods">
+                                <p class="itemtitle"><strong>畅呼吸防雾霾口罩</strong></p>
+                                <p>单枚装 买十枚随机赠一枚</p>
+                                <div class="selecticonbox">
+                                    <ul >
+                                        <li class="selected" style="background:black" value="black"></li>
+                                        <li class="" style="background:gray" value="gray"></li>
+                                        <li class="" style="background:#43ecec" value="green"></li>
+                                        <li class="" style="background:#e25dee" value="rose-red"></li>
+                                        <li class="" style="background:#f8ee5a"value="yellow"></li>
+                                    </ul>
+                                </div>
+                                <div class="hotgoodslist-price"> 
+                                    <p class="itemprice">￥<strong>9.90</strong></p>
+                                </div>
+                                <button>了解详情</button>
+                            </div>
+                            <div class="addshoppingcart"></div>
+                            <p class="textofaddshoppingcart">添加商品</p>   
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    净化器及配件
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li class="mergeimage"><img src=""  data-src="images/purifier/image1.png"></li>
+                        <li>
+                            <img src=""  data-src="images/purifier/image2.png">
+                            <div class="hotgoods">
+                                <p class="itemtitle"><strong>畅呼吸智能空气净化器</strong></p>    
+                                <p>超强净化能力、超低噪音、超长寿命</p>
+                                <div class="selecticonbox" style="margin-left:46%;">
+                                    <ul>
+                                        <li class="selected" style="background:rgb(221, 214, 214)" value="white"></li>
+                                    </ul>
+                                </div>
+                                <div class="hotgoodslist-price"> 
+                                    <p class="itemprice">￥<strong>3499.00</strong></p>
+                                </div>
+                                <button>了解详情</button>
+                            </div>
+                            <div class="addshoppingcart"></div>
+                            <p class="textofaddshoppingcart">添加商品</p>  
+                        </li>
+                        <li>
+                            <img src="" data-src="images/purifier/image3.png">
+                            <div class="hotgoods">    
+                                <p class="itemtitle"><strong>除甲醛超级活性炭滤芯</strong></p>    
+                                <p>打造专业除甲醛超级活性炭滤芯</p>
+                                <div class="selecticonbox" style="margin-left:46%;">
+                                    <ul>
+                                        <li class="selected" style="background:rgb(15, 15, 15)" value="black"></li>
+                                    </ul>
+                                </div> 
+                                <div class="hotgoodslist-price"> 
+                                    <p class="itemprice">￥<strong>699.00</strong></p>
+                                </div> 
+                                <button>了解详情</button>
+                            </div>    
+                            <div class="addshoppingcart"></div>
+                            <p class="textofaddshoppingcart">添加商品</p>     
+                        </li>
+                        <li>
+                            <img src=""data-src="images/purifier/image4.png">
+                            <p><strong>除雾霾甲醛高效复合滤芯</strong></p>    
+                            <p>精选双层防护材质、过滤更精细、去味更有效</p> 
+                            <div class="hotgoodslist-price"> 
+                                <p>￥<strong>799.00</strong></p>
+                            </div>
+                            <button>了解详情</button>   
+                        </li>
+                        <li>
+                            <img src=""data-src="images/purifier/image5.png">
+                            <p><strong>ofo 畅呼吸防雾霾口罩(酷MA萌版)</strong></p>    
+                            <p>酷MA萌版盒装包包邮 买一盒最忌赠一枚</p> 
+                            <div class="hotgoodslist-price"> 
+                                <p>￥<strong>99.00</strong></p>
+                            </div>
+                            <button>了解详情</button>       
+                        </li>
+                        <li>
+                            <img src=""data-src="images/purifier/image6.png">
+                            <p><strong>畅呼吸防雾霾口罩</strong></p>    
+                            <p>单枚装 买十枚随机赠一枚</p>
+                            <div class="hotgoodslist-price"> 
+                                <p>￥<strong>9.90</strong></p>
+                            </div>
+                            <button>了解详情</button>  
+                        </li>
+                        <li>
+                            <img src=""data-src="images/purifier/image7.png">
+                            <p><strong>畅呼吸汽车空调滤清器</strong></p>    
+                            <p>一路洁净、安心出行</p> 
+                            <div class="hotgoodslist-price"> 
+                                <p>￥<strong>69.00</strong></p>
+                            </div>
+                            <button>了解详情</button>  
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    官方精选
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li class="mergeimage"><img src=""data-src="images/choiceness/image1.png"></li>
+                        <li>
+                            <img src=""data-src="images/choiceness/image2.png">
+                            <p><strong>Smartisan 蓝牙运动耳机</strong></p>    
+                            <p>IPX5 级防水设计、佩戴舒适</p> 
+                            <div class="hotgoodslist-price"> 
+                                <p>￥<strong>299.00</strong></p>
+                            </div>
+                            <button>了解详情</button>   
+                        </li>
+                        <li>
+                            <img src=""data-src="images/choiceness/image3.png">
+                            <p><strong>Smartisan 原装Type-C 数据线</strong></p>    
+                            <p>PTC过温保护、凹形设计、TPE环保材质</p> 
+                            <div class="hotgoodslist-price"> 
+                                <p>￥<strong>39.00</strong></p>
+                            </div>
+                            <button>了解详情</button>   
+                        </li>
+                        <li>
+                            <img src=""data-src="images/choiceness/image4.png">
+                            <p><strong>Smartisan S-1001 圈铁线控耳机</strong></p>    
+                            <p>极简造型、复合振膜、专业级调音</p> 
+                            <div class="hotgoodslist-price"> 
+                                <p>￥<strong>199.00</strong></p>
+                            </div>
+                            <button>了解详情</button>   
+                        </li>
+                        <li>
+                            <img src=""data-src="images/choiceness/image5.png">
+                            <p><strong>“足迹系列”保护套 达尔文开始五年环...</strong></p>    
+                            <p>1831年12月27日</p> 
+                            <div class="hotgoodslist-price"> 
+                                <p>￥<strong>99.00</strong></p>
+                            </div>
+                            <button>了解详情</button>   
+                        </li>
+                        <li>
+                            <img src=""data-src="images/choiceness/image6.png">
+                            <p><strong>坚果Pro 2 软胶保护套</strong></p>    
+                            <p>TPU 环保材质、完美贴合</p> 
+                            <div class="hotgoodslist-price"> 
+                                <p>￥<strong>49.00</strong></p>
+                            </div>
+                            <button>了解详情</button>   
+                        </li>
+                        <li>
+                            <img src=""data-src="images/choiceness/image7.png">
+                            <p><strong>Smartisan 快充移动电源 10000mAh</strong></p>    
+                            <p>10000mAh双向快充、轻盈便捷、高标安全保护</p>
+                            <div class="hotgoodslist-price"> 
+                                <p>￥<strong>199.00</strong></p>
+                            </div>
+                            <button>了解详情</button>   
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    锤子科技动态
+                </div>
+                <div class="panel-body">
+                     <ul>
+                        <li class="smartisandyimage1"style="height:200px"></li>
+                        <li class="smartisandyimage2" style="height:200px"></li>
+                        <li class="smartisandyimage3" style="height:200px"></li>
+                        <li class="smartisandyimage4" style="height:200px"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    论坛精选
+                </div>
+                <div class="panel-body">
+                    <ul class="forumimage">
+                        <li>
+                            <img src=""data-src="images/forumimage/image1.jpg" style="width:250px;height:150px;border-radius:5px;">
+                            <p><strong>坚果Pro 2官方开箱照</strong></p>   
+                            <p>坚果Pro现已上市，1799元起i.下面是一些坚果Pro 2 的实拍图</p> 
+                            <a href="http://bbs.smartisan.com/thread-702420-1-1.html" target="_blank">阅读全文></a>   
+                        </li>
+                        <li>
+                            <img src=""data-src="images/forumimage/image2.jpg" style="width:250px;height:150px;border-radius:5px;">
+                            <p><strong>我来为Smartisan OS 重绘图标 </strong></p>  
+                            <p>"模仿 Smartisan OS 的拟物化重绘图标，我也试着画了一些."</p> 
+                            <a href="http://bbs.smartisan.com/thread-565634-1-1.html" target="_blank">阅读全文></a>  
+                        </li>
+                        <li>
+                            <img src="" data-src="images/forumimage/image3.jpg"style="width:250px;height:150px;border-radius:5px;">
+                            <p><strong>Smartisan 手机摄影教程合集</strong></p>
+                            <p>构图、修图、光影...一次手机摄影的全面速成教学.</p> 
+                            <a href="http://bbs.smartisan.com/thread-518316-1-1.html" target="_blank">阅读全文></a>  
+                        </li>
+                        <li>
+                            <img src="" data-src="images/forumimage/image4.jpg"style="width:250px;height:150px;border-radius:5px;">
+                            <p><strong>坚果Pro 2 "足迹"系列</strong></p> 
+                            <p>为了那些改变人类命运的足迹，这次坚果Pro 2 依然推出了"足迹系列"背壳.</p> 
+                            <a href="http://bbs.smartisan.com/thread-725433-1-1.html" target="_blank">阅读全文></a>  
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</div>
+<footer>
+    <div class="footlistset">
+        <ul>
+            <li><strong>订单服务</strong></li>
+            <li><a>购买指南</a></li>
+            <li><a>支付方式</a></li>
+            <li><a>送货政策</a></li>
+        </ul>
+        <ul>
+            <li><strong>服务支持</strong></li>
+            <li><a>售后服务</a></li>
+            <li><a>维修门店</a></li>
+            <li><a>零售门店</a></li>
+        </ul>
+        <ul>
+            <li><strong>自动服务</strong></li>
+            <li><a>热点咨询</a></li>
+            <li><a>预约购买</a></li>
+            <li><a>订单物流</a></li>
+        </ul>
+        <ul>
+            <li><strong>媒体中心</strong></li>
+            <li><a>新闻动态</a></li>
+            <li><a>官方视频</a></li>
+            <li><a>图片资源</a></li>
+        </ul>
+        <ul>
+            <li><strong>关于公司</strong></li>
+            <li><a>公司简介</a></li>
+            <li><a>加入我们</a></li>
+            <li><a>联系我们</a></li>
+        </ul>
+    </div>
+    <div class="contactright">
+        <h2>400-626-5666</h2>
+        <p>周一至周日 9：00-18：00 (仅收市话费)</p>
+        <button>在线帮助</button> 
+    </div>
+
+    <div class="copyrightset">
+        <hr>
+        <span>Copyright ©, Smartisan Digital Co., Ltd. All Rights Reserved.北京锤子数码科技有限公司</span>|
+        <span><a>法律声明</a></span>|
+        <span><a>隐私条款</a></span>|
+        <span><a>开发者中心</a></span>
+    </div>   
+</footer>
+    <script>
+    
+    </script>
+<script src="js/index.js"></script>    
+</body>
+</html>
