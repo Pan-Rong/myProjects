@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>高德地图</title>
+    <!-- 导入地图样式 -->
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+
+    <link rel="stylesheet" href="dist/style.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!-- 布局界面 -->
+	<div class="container">
+        <div data-bind="with: currentList">  
+            <div data-bind="css: {listHeader: true},style: {left: searchListHidden() ? '200px':'0px'}">
+                <a href="#" data-bind="click: $parent.toggleMenu,foreach: iconListCss">
+                    <i data-bind="css: $data"></i>
+                </a>
+                <h1 data-bind="css: {headerTitle: true}">高德地图</h1>
+            </div>
+            <div data-bind="css: {searchList: true},style: {display: searchListHidden() ? 'block':'none'}">
+                <h2 data-bind="css: {locationTitle: true},text: location"></h2>
+                <input type="text" data-bind="css: {inputStyle: true},textInput: selectLocation" placeholder="测试位置">
+                <div data-bind="css: {filterStyle: true}">Filter</div> 
+                <!--显示坐标title-->
+                <div data-bind="foreach: showLocationList">
+                    <li data-bind="css: {locationList: true},text: $data.title"></li>        
+                </div>   
+            </div>
+        </div> 
+        <div id="map"></div>     
+
+    </div>
+
+<script src="src/libs/jQuerylib/jquery-3.2.1.min.js"></script>
+<script src="src/libs/knockout-3.4.2.js"></script>
+<!--API加载失败时，提示信息-->
+<script src="dist/mapErrorHandler.js"></script>
+<!-- 异步加载 JavaScript API-->
+<script src="http://webapi.amap.com/maps?v=1.4.4&key=fa2d995e01be8d336551f43bc20ec87a&callback=init"
+        onerror="mapErrorHandler()"
+></script>
+<script src="dist/coordinates.js"></script>
+<script src="dist/app.js"></script>
+<script src="dist/displayMap.js"></script>
+
+</body>
+</html>
