@@ -234,12 +234,17 @@ function onclickhandle(obj){
 					imgMatchArray[flg-idIntNum]=1;
 					showStars(obj,scoreNum);//显示星星等级;
 				}else{
-					alert("图片不匹配");
-					list[flg-idIntNum].firstChild.style.display="none";
-					list[idIntNum].firstChild.style.display="none";
-							//实现当两个图片不匹配时，隐藏图片;					
+					setTimeout(function(){
+						list[flg-idIntNum].firstChild.style.display="none";
+						list[idIntNum].firstChild.style.display="none";
+						//实现当两个图片不匹配时，隐藏图片;		
+					},800);
+								
 				}
-				flg=0;//清除标签;
+				setTimeout(function(){	
+					flg=0;//清除标签;
+				},1000);
+			
 			}
 		 }else{
 	 		compArray[0]=fnameArray[idIntNum];
