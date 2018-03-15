@@ -1,3 +1,4 @@
+
 # React demo1
 
 ## 安装环境
@@ -45,6 +46,13 @@ Create React APP则可以节省这一步骤。
 法，如JSX(js扩展，可以在js语句中直接使用HTML标签)，它安装了webpack以使我们进行生成和构建以及`webpack dev server` ,它给了我
 们目前为止看到的自动重新加载行为。`create-react-app`是快速入门最新技术的一个好的方法。你无需花费很多时间去学习它们，便可开始
 构建第一个React应用了
+
+```
+npm install
+```
+```
+npm start
+```
 
 **三、Webpack配置React开发环境**
 [Webpack](http://webpack.github.io/)是一个前端资源加载/打包工具，只需要相对简单的配置就可以提供前端工程化需要的各种功能.
