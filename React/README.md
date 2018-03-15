@@ -1,5 +1,5 @@
 
-# React demo1
+# React demo
 
 ## 安装环境
 **一、浏览器环境下直接打开React的版本**
