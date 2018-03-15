@@ -14,7 +14,9 @@ react-router-dom场景.当你使用BrowserRouter时，你是在创建history对�
 ## 安装
 **安装react运行环境**(直接下载示例的文件夹，可忽略这个步骤)
 安装一个全局的Create React App,NPM的命令行如下：
-```npm install -g create-react-app```
+```
+npm install -g create-react-app
+```
 在命令窗口，打开create-react-app安装的文件夹，在这里输入以下命令安装react项目包(文件夹名称:contacts)：
 ```
  create-react-app contacts
