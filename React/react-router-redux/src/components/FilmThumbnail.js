@@ -14,7 +14,7 @@ function FilmThumbnail({films}){
         year} = films
     return(
         <div  className="display-align-justify-center">
-            <Thumbnail src = { images.small ? images.small : '/images/replacePicture.jpg'}  style={{width:"150px"}}alt=" 图片无法加载 "/>
+            <Thumbnail src = { images.small ? images.small : '/images/replacePicture.jpg'}  style={{width:"150px",height:"220px"}}alt=" 图片无法加载 "/>
             <div className="margin-left10px width-200px">
                 <h4>{ title }</h4>
                 <p>演员：{ 
